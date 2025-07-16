@@ -1,0 +1,5 @@
+sanic
+sanic-ext
+sanic-cors
+sqlalchemy
+asyncpg
