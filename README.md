@@ -14,7 +14,7 @@ Aplicação simples de lista de tarefas (To-Do List) com backend em Sanic (Pytho
 
 ## Estrutura do Projeto
 
-project/
+```project/
 ├── backend/
 │ ├── app/
 │ │ ├── controllers/
@@ -45,25 +45,9 @@ project/
 │ └── package.json
 ├── docker-compose.yml
 └── README.md
-
-
----
-
-## Como Rodar
+```
 
 ### Requisitos
 
 - Docker e Docker Compose instalados
 - Node.js e npm (para rodar frontend localmente, opcional se usar Docker)
-
-### Rodando com Docker Compose
-
-No diretório raiz do projeto:
-
-```bash
-docker-compose build
-docker-compose up
-
-Backend estará em: http://localhost:8000
-Frontend estará em: http://localhost:3000 (configuração padrão do Vite)
-
