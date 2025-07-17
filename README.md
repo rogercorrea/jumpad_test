@@ -1,4 +1,4 @@
-# Task Jumped.ai - Sanic + React
+# Jumped.ai - Sanic + React
 
 Aplicação simples de lista de tarefas (To-Do List) com backend em Sanic (Python) e PostgreSQL, e frontend em React com Vite.
 
