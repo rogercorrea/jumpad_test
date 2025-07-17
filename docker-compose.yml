@@ -1,24 +1,19 @@
-# docker-compose.yml
-version: '3.8'
+version: '3.9'
 
 services:
   db:
     image: postgres:15
-    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: tasks
+    volumes:
+      - db_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
 
   backend:
     build: ./backend
-    command: python app/main.py
-    volumes:
-      - ./backend:/app
     ports:
       - "8000:8000"
     depends_on:
@@ -26,5 +21,12 @@ services:
     environment:
       - DB_URL=postgresql+asyncpg://postgres:postgres@db:5432/tasks
 
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
 volumes:
-  pgdata:
+  db_data:

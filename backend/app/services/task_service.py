@@ -1,4 +1,4 @@
-from app.repositories.task_repository import TaskRepository
+from repositories.task_repository import TaskRepository
 
 
 class TaskService:

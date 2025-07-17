@@ -1,5 +1,5 @@
-from app.models.task_model import Task
-from app.db import SessionLocal
+from models.task_model import Task
+from db import SessionLocal
 from sqlalchemy.future import select
 
 

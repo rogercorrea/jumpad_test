@@ -1,8 +1,8 @@
 from sanic import Sanic
 from sanic_cors import CORS
-from app.controllers.task_controller import task_bp
-from app.models.task_model import Base
-from app.db import engine
+from controllers.task_controller import task_bp
+from models.task_model import Base
+from db import engine
 
 app = Sanic("TaskApp")
 CORS(app)  # Habilita CORS para todas as rotas

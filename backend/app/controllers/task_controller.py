@@ -1,5 +1,5 @@
 from sanic import Blueprint, response, Request
-from app.services.task_service import TaskService
+from services.task_service import TaskService
 
 
 # Blueprint para as rotas de tarefas
